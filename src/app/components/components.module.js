@@ -1,5 +1,6 @@
 angular
   .module('components', [
     'components.contact',
-    'components.auth'
+    'propertyWatch',
+    'observeAttributes'
   ]);

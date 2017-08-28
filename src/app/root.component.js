@@ -1,5 +1,7 @@
 var root = {
-  templateUrl: './root.html'
+  templateUrl: './root.html',
+  controller: function (){
+  }
 };
 
 angular

@@ -1,3 +1,9 @@
 <div class="root">
-  Hello world!
+  <div class="left-column">
+    <property-watch class="counter-drink"></property-watch>
+  </div>
+
+  <div class="right-column" ng-controller="RootController as watcher">
+    <observe-attributes name="{{watcher.name}}" update="watcher.updateName()" class="counter-food"></observe-attributes>
+  </div>
 </div>
