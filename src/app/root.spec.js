@@ -37,15 +37,15 @@ describe('observeAttributes directive test', function(){
     $controller = $injector.get('$controller');
     $rootScope = $injector.get('$rootScope');
     $scope = $rootScope.$new();
-    element = angular.element('<observe-attributes></observe-attributes>');
     $controller = $controller('RootController as counter', {$scope: $scope});
   }));
 
   it('should contain the right text', function(){
+    $scope.count = 0;
+    $scope.increment();
     var element = $compile('<observe-attributes></observe-attributes>')($rootScope);
     $rootScope.$digest();
-    $controller.increment();
-    expect(element.html()).toContain('Counter: 0');
+    expect(element.html()).toContain('Counter: 1');
    });
 
 });

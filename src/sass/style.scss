@@ -30,12 +30,21 @@ body {
   font-size: 20px;
   display: block;
 }
+
+.component-box{
+  width: 100%;
+  margin: 20px 0;
+  float: left;
+  border-bottom: solid 2px #cccccc;
+  border-top: solid 2px #cccccc;
+  overflow: hidden;
+}
+
 .component-container{
   width: 100%;
 }
 .counter-food{
   background-color: #e0ffe6;
-  float: left;
   width: 100%;
 }
 .counter-drink{

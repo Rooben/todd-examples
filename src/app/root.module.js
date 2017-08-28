@@ -43,7 +43,7 @@ function observeAttributes(){
           $attrs.$updateClass('counter-food', 'counter-drink');
         }
       });
-    }
+    },
   }
 };
 

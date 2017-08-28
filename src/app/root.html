@@ -1,9 +1,22 @@
 <div class="root" ng-controller="RootController as watcher">
   <div class="left-column">
-    <property-watch class="counter-food"></property-watch>
+
+      <div class="component-box">
+        <property-watch class="counter-food"></property-watch>
+      </div>
+
+
+      <div class="component-box">
+        <bindtocontroller count="watcher.count"></bindtocontroller>
+      </div>
+
   </div>
 
   <div class="right-column">
-    <observe-attributes name="{{watcher.name}}"></observe-attributes>
+
+      <div class="component-box">
+        <observe-attributes name="{{watcher.name}}"></observe-attributes>
+      </div>
+
   </div>
 </div>
