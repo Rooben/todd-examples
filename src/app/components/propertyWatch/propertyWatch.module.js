@@ -19,4 +19,4 @@ function PropertyWatchController($scope){
 
 angular
   .module('propertyWatch', [])
-  .controller('propertyWatch', PropertyWatchController);
+  .controller('PropertyWatchController', PropertyWatchController);

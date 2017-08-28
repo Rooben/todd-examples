@@ -1,9 +1,9 @@
-<div class="component-container">
+<div class="component-container" ng-controller="PropertyWatchController as pwCtrl">
   <h2>Angular property watch with $scope.$watch</h2>
   <div>
-    <span class="panel">Counter: {{$ctrl.count}}</span>
-    <button href="" ng-click="$ctrl.increment()">Increment Counter</button>
-    <button href="" ng-click="$ctrl.decrement()">Decrement Counter</button>
+    <span class="panel">Counter: {{pwCtrl.count}}</span>
+    <button href="" ng-click="pwCtrl.increment()">Increment Counter</button>
+    <button href="" ng-click="pwCtrl.decrement()">Decrement Counter</button>
   </div>
 </div>
 

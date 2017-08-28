@@ -1,12 +1,12 @@
-describe('CounterController test', function(){
+describe('PropertyWatchController test', function(){
   var $controller, $scope, CounterController, $rootScope;
-  beforeEach(module('root'));
+  beforeEach(module('propertyWatch'));
 
   beforeEach(inject(function($injector){
     $controller = $injector.get('$controller');
     $rootScope = $injector.get('$rootScope');
     $scope = $rootScope.$new();
-    CounterController = $controller('CounterController as counter', {$scope: $scope});
+    CounterController = $controller('PropertyWatchController as propCtrl', {$scope: $scope});
   }));
 
   it('increment the count property', function(){
