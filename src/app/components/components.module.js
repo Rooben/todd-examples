@@ -1,5 +1,9 @@
 angular
   .module('components', [
     'propertyWatch',
-    'bindtocontroller'
+    'bindtocontroller',
+    'directivecompilelink',
+    'ngtransclusion',
+    'manualTransclude',
+    'multislottransclude'
   ]);

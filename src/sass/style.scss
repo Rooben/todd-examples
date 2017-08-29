@@ -36,7 +36,6 @@ body {
   margin: 20px 0;
   float: left;
   border-bottom: solid 2px #cccccc;
-  border-top: solid 2px #cccccc;
   overflow: hidden;
 }
 
@@ -53,7 +52,21 @@ body {
   width: 100%;
 }
 
+.error{
+  border: 1px solid blue;
+  padding: 10px 15px;
+  margin: 0 0 10px;
+  border-radius: 10px;
+  text-align: center;
+}
 
+.error-warning{
+  border-color: solid 1px red;
+}
+
+.error-invalid{
+  border-color: solid 1px green;
+}
 
 a {
   color: #5c5c5c;

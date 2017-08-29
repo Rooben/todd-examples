@@ -29,7 +29,8 @@ describe('RootController test', function(){
 
 
 describe('observeAttributes directive test', function(){
-  var $scope, $compile, $rootScope;
+  var $scope, $compile, $rootScope, element, RootController;
+
   beforeEach(module('root'));
 
   beforeEach(inject(function($injector){
@@ -37,15 +38,25 @@ describe('observeAttributes directive test', function(){
     $controller = $injector.get('$controller');
     $rootScope = $injector.get('$rootScope');
     $scope = $rootScope.$new();
-    $controller = $controller('RootController as counter', {$scope: $scope});
+    element = angular.element('<observe-attributes></observe-attributes>');
+
+    RootController = $controller('RootController as counter', {$scope: $scope});
   }));
 
+
+  it('controller should contain increment method', function(){
+    expect(RootController.increment).toBeDefined();
+  });
+
   it('should contain the right text', function(){
-    $scope.count = 0;
-    $scope.increment();
-    var element = $compile('<observe-attributes></observe-attributes>')($rootScope);
+    RootController.count = 0;
+    spyOn(RootController, 'increment').and.callThrough();
+    RootController.increment();
+    $compile(element)($rootScope);
     $rootScope.$digest();
-    expect(element.html()).toContain('Counter: 1');
+    expect(RootController.increment).toHaveBeenCalled();
+    expect(RootController.count).toEqual(1);
+    //expect(element[0].querySelector('.panel').innerHTML).toContain('Counter: 1');
    });
 
 });
