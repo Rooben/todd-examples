@@ -1,15 +1,16 @@
 <div class="root" ng-controller="RootController as watcher">
+<!-- *********************** LEFT COLUMN BEGINS ************************************************** -->
   <div class="left-column">
-
-      <div class="component-box">
+    <!-- .............. component .................... -->
+    <div class="component-box">
         <property-watch class="counter-food"></property-watch>
       </div>
-
+    <!-- .............. component .................... -->
 
       <div class="component-box">
         <bindtocontroller count="watcher.count"></bindtocontroller>
       </div>
-
+    <!-- .............. component .................... -->
       <div class="component-box"> <br/>
         <h2>Single Slot, Manual, and Multi-slot transclusion</h2> <br/>
         <h3>Single Slot transclusion</h3>
@@ -30,7 +31,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
         </ng-transclusion>
       </div>
-
+    <!-- .............. component .................... -->
       <div class="component-box"> <br/>
         <h2>Single Slot, Manual, and Multi-slot transclusion</h2> <br/>
         <h3>Multi Slot Transclusion</h3>
@@ -49,44 +50,126 @@
             <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
           </multi-slot-transclude>
       </div>
+    <!-- .............. scopes change effects component .................... -->
+    <div style="width: 50%; float: left;" ng-controller="UsingParentScopeController">
+      <div class="component-box">
+        <div style="border: solid 1px blue">
+          <div>
+            <h3>{{greeting}}, you are in the USA</h3>
+            <button ng-click="sayHello('Welcome')">Travel To The USA</button>
+          </div>
+        </div>
 
+        <div style="border: solid 1px red">
+          <div using-parent-scope>
+            <h3>{{greeting}}, you are in Germany</h3>
+            <button ng-click="sayHello('Willkommen')">Travel To Germany</button>
+          </div>
+        </div>
+
+        <div style="border: solid 1px green">
+          <div using-parent-scope>
+            <h3>{{greeting}}, you are in France</h3>
+            <button ng-click="sayHello('Bien venu')">Travel To France</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:50%; float: left;" ng-controller="UsingIsolateScopeController">
+      <div class="component-box">
+        <div style="border: solid 1px blue">
+          <using-isolate-scope
+             default-greeting-text="greeting"
+             set-greeting="hideGreeting()"
+             hideSpecific="hideSpecific"
+             greeting-text="Welcome">USA
+          </using-isolate-scope>
+        </div>
+
+        <div style="border: solid 1px red">
+          <using-isolate-scope
+            default-greeting-text="greeting"
+            set-greeting="hideGreeting()"
+            greeting-text="Wilkommen">Germany
+          </using-isolate-scope>
+        </div>
+
+        <div style="border: solid 1px green">
+          <using-isolate-scope
+            default-greeting-text="greeting"
+            set-greeting="hideGreeting()"
+            greeting-text="Bien Venu">France
+          </using-isolate-scope>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- .............. component .................... -->
   </div>
+  <!-- *********************** LEFT COLUMN ENDS ************************************************** -->
 
+
+
+
+
+
+  <!-- *********************** RIGHT COLUMN BEGINS ************************************************** -->
   <div class="right-column">
-
+    <!-- .............. component .................... -->
       <div class="component-box">
         <observe-attributes name="{{watcher.name}}"></observe-attributes>
       </div>
-
+    <!-- .............. component .................... -->
       <div class="component-box" ng-controller="CompileLinkErrorController as errCtrl">
         <h2>Directive compile vers link functions, toggle class name.</h2>
         <div ng-repeat="error in errCtrl.list" compile-link-directive type="{{ error.type }}">
           {{error.message}}
         </div>
       </div>
+    <!-- .............. component .................... -->
+      <div class="component-box"> <br/>
+        <h2>Single Slot, Manual, and Multi-slot transclusion</h2> <br/>
 
-    <div class="component-box"> <br/>
-      <h2>Single Slot, Manual, and Multi-slot transclusion</h2> <br/>
+        <h3>Manual Transclusion</h3>
+        <!-- Alternatively, we could have done this with property binding, which could have required name
+                and desc to be passed as attributes and could get messy -->
+        <!-- The goal is to inject the contents of this directive into the  ng-transclude property element -->
+        <manual-transclude>
+          <h4>Tom Delonge</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
+        </manual-transclude>
 
-      <h3>Manual Transclusion</h3>
-      <!-- Alternatively, we could have done this with property binding, which could have required name
-	            and desc to be passed as attributes and could get messy -->
-      <!-- The goal is to inject the contents of this directive into the  ng-transclude property element -->
-      <manual-transclude>
-        <h4>Tom Delonge</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
-      </manual-transclude>
+        <manual-transclude>
+          <h4>Mark Hopus</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
+        </manual-transclude>
 
-      <manual-transclude>
-        <h4>Mark Hopus</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
-      </manual-transclude>
+        <manual-transclude>
+          <h4>Travis Barker</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
+        </manual-transclude>
+      </div>
 
-      <manual-transclude>
-        <h4>Travis Barker</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adisplicing elitus</p>
-      </manual-transclude>
+    <!-- .............. component .................... -->
+    <div class="component-box">
+      <h2>Tabs with Angular</h2> <br/>
+      <tabs>
+        <tab label="One">
+          Tab One Content
+        </tab>
+
+        <tab label="Two">
+          Tab Two Content
+        </tab>
+
+        <tab label="Three">
+          Tab Three Content
+        </tab>
+      </tabs>
     </div>
 
+
   </div>
+  <!-- *********************** RIGHT COLUMN ENDS ************************************************** -->
 </div>

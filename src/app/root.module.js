@@ -51,7 +51,8 @@ function observeAttributes(){
 angular
   .module('root', [
     'common',
-    'components',
+    'components.module',
+    'directives.module',
     'templates'
   ])
   .controller('RootController', RootController)

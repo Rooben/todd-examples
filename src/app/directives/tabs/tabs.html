@@ -1,0 +1,12 @@
+<div class="component-container">
+  <div class="tabs">
+    <ul class="tabs__list">
+      <li ng-repeat="tab in tabs.list" ng-class="{'selectedtab': tab.selected}">
+        <a href="" ng-click="tabs.selectTab($index)"> {{ tab.label }} </a>
+      </li>
+    </ul>
+
+    <div class="tabs__content" ng-transclude></div>
+
+  </div>
+</div>

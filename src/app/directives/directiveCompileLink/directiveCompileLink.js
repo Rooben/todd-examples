@@ -30,7 +30,7 @@ function compileLinkDirective(){
         // This post function is just the normal link function, hence same params passed
         post: function($scope, $element, $attrs){
           // access to child elements that are linked
-          $attrs.$addClass('error-' + $attrs.type);
+          $attrs.$addClass('error__' + $attrs.type);
         }
       };
       // Alternatively, we could return a function, which in this case would be the postlink function, just like the one above
