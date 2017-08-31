@@ -8,7 +8,7 @@ function tab(){
     scope: {},
     transclude: true,
     templateUrl: './tab.html',
-    require: '^^componentsTab',
+    require: '^^tabs',
     link: function($scope, $element, $attrs, $ctrl){
       $scope.tab = {
         label: $attrs.label,

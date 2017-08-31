@@ -1,7 +1,7 @@
 angular
   .module('directives.module', [
-    'propertyWatch',
     'bindtocontroller',
+    'observeAttributes',
     'directivecompilelink',
     'ngtransclusion',
     'manualTransclude',

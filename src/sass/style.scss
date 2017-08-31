@@ -1,9 +1,9 @@
 * {
-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -93,7 +93,7 @@ root .loader {
 }
 
 
-/*--------  Styles for the componentsTab  ------------*/
+/*--------  Styles for the tabs  ------------*/
 .tabs__list{
   width: 100%;
   li{
@@ -125,7 +125,7 @@ root .loader {
   background-color: #fef6f3;
   border-bottom: solid 1px #fef6f3 !important;
 }
-/*--------  Styles for the componentsTab end ------------*/
+/*--------  Styles for the tabs end ------------*/
 
 /**
  * header
@@ -499,10 +499,10 @@ button.delete:active {
   font-weight: 400;
   src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
-       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+  local('MaterialIcons-Regular'),
+  url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+  url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
