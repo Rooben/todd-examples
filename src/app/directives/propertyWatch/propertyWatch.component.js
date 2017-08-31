@@ -1,5 +1,5 @@
 var propertyWatch = {
-  templateUrl: 'propertyWatch.html'
+  templateUrl: './propertyWatch.html'
 };
 
 angular
