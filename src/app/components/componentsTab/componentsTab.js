@@ -3,10 +3,7 @@ var componentsTab = {
   templateUrl: './componentsTab.html',
   controller: function(){
     this.tabs = [];
-    this.addTab = function(tab){
-      if(!this.tabs.length){
-        tab.selected = true;
-      }
+    this.addTab = function addTab(tab){
       this.list.push(tab);
     };
     this.selectTab = function selectTab(index){

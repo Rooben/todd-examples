@@ -17,7 +17,7 @@ function bindtocontroller(){
     bindToController: {
       count: '='
     },
-    template: './bindToController.html',
+    templateUrl: './bindToController.html',
 
     controller: 'BindtocontrollerController as bindCtrl'
   }

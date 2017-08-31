@@ -3,17 +3,18 @@ var componentTab = {
     label: '@'
   },
   require: {
-    componentsTab: '^^componentsTab'
+    parent: '^^componentsTab'
   },
   transclude: true,
-  templateUrl: './componentTab.html',
+  templateUrl: 'componentTab.html',
   controller: function(){
     this.tab = {
       label: this.label,
       selected: false
     };
     this.$onInit = function(){
-      this.tabs.addTab(this.tab);
+      this.parent.addTab(this.tab);
+      console.log(this.parent);
     };
   }
 
