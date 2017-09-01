@@ -4,5 +4,6 @@ angular
     'componentTab',
     'componentsTab',
     'onChangesHook',
-    'statelessComponent'
+    'statelessComponent',
+    'filterDemo'
   ]);

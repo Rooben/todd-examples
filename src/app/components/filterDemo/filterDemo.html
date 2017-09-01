@@ -1,0 +1,16 @@
+<div class="component-container">
+ <span style="font-weight: bold; font-size: 20px;"> Filter by :</span>
+  <button href="" ng-click="genderSelected = undefined">All</button>
+  <button href="" ng-click="genderSelected = 'male'">Male</button>
+  <button href="" ng-click="genderSelected = 'female'">Female</button>
+
+  <ul class="genderfilter">
+    <li ng-repeat="player in $ctrl.players | gender:genderSelected | orderBy:'rank'"
+      ng-class="{
+        male: player.gender === 'male',
+        female: player.gender === 'female'
+      }">
+      <p> {{ player.name }} <span>{{ player.rank }}</span> </p>
+    </li>
+  </ul>
+</div>

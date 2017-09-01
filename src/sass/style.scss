@@ -127,6 +127,27 @@ root .loader {
 }
 /*--------  Styles for the tabs end ------------*/
 
+/*--------  Styles for gender filter ------------*/
+ul.genderfilter{
+  overflow: hidden;
+  padding: 0;
+}
+
+.male{
+  background: #2c3e50;
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0;
+}
+.female{
+  background: #d35400;
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0;
+}
+/*--------  Styles for gender filter end ------------*/
+
+
 /**
  * header
  */

@@ -9,5 +9,6 @@ angular
     'common',
     'templates',
     'directives.module',
-    'components.module'
+    'components.module',
+    'filters.module'
   ]).controller('RootController', RootController);
