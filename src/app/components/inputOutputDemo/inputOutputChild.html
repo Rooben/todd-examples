@@ -1,0 +1,16 @@
+<div class="inpt-oupt-box">
+  <h3>{{$ctrl.record.site}}</h3>
+  <h4>{{$ctrl.record.location}}</h4>
+  <h2>{{$ctrl.record.temperature}}</h2>
+  <h3>{{$ctrl.record.time}}</h3>
+
+  <!-- Selected record gets passed back to the parent component -->
+  <form ng-if="$ctrl.editing">
+    <input ng-model="$ctrl.record.site"/>
+    <input ng-model="$ctrl.record.location"/>
+    <input ng-model="$ctrl.record.temperature"/>
+    <input ng-model="$ctrl.record.time"/>
+  </form>
+  <button ng-click="$ctrl.onSelect({toSelect: $ctrl.record}); $ctrl.closeEditing()"> {{$ctrl.selectLabel}} </button><br/>
+  <button ng-hide="$ctrl.editing" ng-click="$ctrl.enableEditing()">Edit</button>
+</div>

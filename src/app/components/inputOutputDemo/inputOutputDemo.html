@@ -1,0 +1,17 @@
+<div class="component-container">
+  <h3>My Weather Records (component tree)</h3>
+  <div>
+    <input placeholder="Search" ng-model="searchKey"/>
+  </div>
+  <div>
+    <input-output-child ng-repeat="entry in $ctrl.weatherRecords | filter:searchKey"
+      record="entry"
+      select-label="Select this record"
+      on-select="$ctrl.selectRecord(toSelect)"
+      editing="$ctrl.editing">
+    </input-output-child>
+    <div>
+      Selected Record: <pre>{{$ctrl.selectedRecord | json}}</pre>
+    </div>
+  </div>
+</div>
