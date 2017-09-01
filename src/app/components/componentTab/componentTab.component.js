@@ -13,10 +13,17 @@ var componentTab = {
             selected: false
         };
 
-        //console.log(this);
         this.$onInit = function(){
             this.parentComponent.addTab(this.tab);
         };
+
+        this.$postLink = function(){
+            this.selectTab(0);
+        };
+
+        this.$onDestroy = function(){
+            //unbind events here
+        }
     }
 };
 

@@ -4,9 +4,9 @@ var componentsTab = {
     controller: function(){
         this.tabs = [];
         this.addTab = function addTab(tab){
-            if(!this.tabs.length){
+            /*if(!this.tabs.length){
                 tab.selected = true;
-            }
+            }*/
             this.tabs.push(tab);
         };
         this.selectTab = function selectTab(index){

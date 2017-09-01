@@ -2,5 +2,7 @@ angular
   .module('components.module', [
     'propertyWatch',
     'componentTab',
-    'componentsTab'
+    'componentsTab',
+    'onChangesHook',
+    'statelessComponent'
   ]);
