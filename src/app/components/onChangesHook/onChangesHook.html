@@ -1,0 +1,7 @@
+<div class="component-container">
+  <pre>{{ $ctrl.user | json }}</pre>
+  <stateless-component
+     user="$ctrl.user"
+     on-update="$ctrl.updateUser($event);">
+  </stateless-component>
+</div>
