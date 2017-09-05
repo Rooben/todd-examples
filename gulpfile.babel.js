@@ -27,6 +27,7 @@ const paths = {
     'angular/angular.js',
     'angular-ui-router/release/angular-ui-router.js',
     'firebase/firebase.js',
+    'angular-resource/angular-resource.js',
     'angularfire/dist/angularfire.js',
     'angular-loading-bar/build/loading-bar.min.js'
   ],

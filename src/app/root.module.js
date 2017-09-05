@@ -14,7 +14,8 @@ angular
     'filters.module',
     'directivesRoute',
     'componentsRoute',
-    'httpDemosRoute'
+    'httpDemosRoute',
+    'crudComponents.module'
   ])
   .config(function($urlRouterProvider, $locationProvider){
     $urlRouterProvider.otherwise('/');

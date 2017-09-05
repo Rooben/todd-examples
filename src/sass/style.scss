@@ -186,6 +186,31 @@ ul.genderfilter{
 }
 /*--------  Styles for component input-output demo ------------*/
 
+
+/*--------  Todo list styles start ------------*/
+.todo__list_container, .todo__list{
+  width: 550px;
+}
+
+
+.todo__list{
+  border: solid 1px black;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.todo-row-item{
+  float: left;
+  margin-right: 20px;
+}
+
+.complete-status{
+  width: 110px;
+}
+
+/*--------  Todo list styles start ------------*/
+
+
 /**
  * header
  */
