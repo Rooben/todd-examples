@@ -4,7 +4,7 @@ function BindtocontrollerController(){
 
   this.increment = function(){
     this.count++;
-  }
+  };
   this.decrement = function(){
     this.count--;
   }

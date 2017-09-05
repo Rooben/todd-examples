@@ -1,6 +1,6 @@
 describe('bindtocontroller directive test', function(){
   var $scope, $compile, $rootScope, element, BindtocontrollerController;
-  beforeEach(module('components'));
+  beforeEach(module('bindtocontroller'));
 
   beforeEach(inject(function($injector){
     $compile = $injector.get('$compile');
